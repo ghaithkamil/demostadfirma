@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skär Städ – Flytt-, hem- och kontorsstädning</title>
+<meta name="description" content="Skär Städ erbjuder flytt-, visnings-, hem-, bygg-, kontors- och trappstädning samt fönsterputs i Linköping. Material ingår och RUT-avdrag ges.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff;--soft:#fdf2f6;--ink:#2b2629;--mut:#6e6569;--line:#ece6e9;--pink:#d9467f;--pink-d:#b8326a;--pink-l:#f8d7e4;--on:#fff;--grey:#f5f3f4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.15;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6vw,4rem)}h2{font-size:clamp(1.7rem,4vw,2.4rem)}h3{font-size:1.3rem}
+p{margin:0 0 1em;max-width:62ch}a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.35rem;text-decoration:none;display:flex;align-items:center;gap:9px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--pink);display:inline-block}
+.links{display:flex;gap:6px;align-items:center}
+.links a{text-decoration:none;padding:8px 14px;border-radius:99px;font-weight:500;font-size:.98rem;color:var(--mut)}
+.links a[aria-current=page]{background:var(--pink-l);color:var(--pink-d)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--pink);color:var(--on);text-decoration:none;font-weight:600;padding:13px 24px;border-radius:99px;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--pink-d)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--pink);background:transparent}
+.hero{background:var(--bg);border-bottom:1px solid var(--line);padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--mut);margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:28px}
+.panel h3{margin-bottom:14px}
+.panel li{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--line);list-style:none}
+.panel ul{margin:0;padding:0}
+.panel li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--pink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.7 2.7L13 6.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+section{padding:72px 0}
+.alt{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{margin-bottom:34px}.head p{color:var(--mut);margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.card p{color:var(--mut);margin:0;font-size:.98rem}
+.card .pr{margin-top:auto;padding-top:12px;font-weight:600;color:var(--pink-d)}
+a.card:hover{border-color:var(--pink)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.facts{display:grid;gap:14px}
+.fact{border-left:3px solid var(--pink);padding:4px 0 4px 16px}.fact b{font-family:Fraunces,serif;font-size:1.5rem;display:block;font-weight:500}.fact span{color:var(--mut);font-size:.95rem}
+.sig{font-family:Fraunces,serif;font-size:1.2rem;margin-top:8px}
+.cities{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.chip{background:var(--pink-l);color:var(--pink-d);padding:6px 14px;border-radius:99px;font-weight:600;font-size:.92rem}
+/* tjänster */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-weight:500;padding:9px 18px;border-radius:99px;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--pink);border-color:var(--pink);color:var(--on)}
+.svc{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:30px;margin-bottom:18px;scroll-margin-top:90px}
+.svc-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;color:var(--pink-d);background:var(--pink-l);padding:3px 12px;border-radius:99px;margin:0 6px 10px 0}
+.price{background:var(--soft);border-radius:16px;padding:14px 20px;min-width:210px}
+.price div{display:flex;justify-content:space-between;gap:14px;padding:3px 0}.price b{white-space:nowrap}
+.price small{display:block;color:var(--mut);margin-top:6px}
+.svc p.d{margin:12px 0 16px;color:var(--mut)}
+details{border-top:1px solid var(--line);padding:2px 0}
+summary{cursor:pointer;font-weight:600;padding:13px 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;color:var(--pink);line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details ul{margin:0 0 14px;padding-left:20px;color:var(--mut)}details li{margin:4px 0}
+.note{font-size:.95rem;color:var(--mut);background:var(--grey);border-radius:12px;padding:10px 14px}
+.guar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;background:var(--soft);border-radius:20px;padding:24px 28px;margin-top:28px}
+.guar b{font-family:Fraunces,serif;font-size:1.2rem;font-weight:500}
+/* kontakt */
+.cgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--pink-l);border-color:var(--pink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cinfo p{margin-bottom:.4em}.cinfo a{color:var(--pink-d);font-weight:600}
+fieldset{border:1px solid var(--line);border-radius:18px;padding:20px;margin:0;display:grid;gap:14px}fieldset[hidden]{display:none}legend{font-family:Fraunces,serif;font-size:1.15rem;padding:0 8px}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mut);font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.page{display:none}.page.on{display:block}
+@media(max-width:820px){.hero .wrap,.about,.cgrid{grid-template-columns:1fr}.hero{padding:44px 0 52px}section{padding:52px 0}.two{grid-template-columns:1fr}.links{gap:0}.links a{padding:7px 9px;font-size:.88rem}.logo span{display:none}.price{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#start" aria-label="Skär Städ, startsida"><i></i><span>Skär Städ</span></a>
+<div class="links" role="navigation" aria-label="Huvudmeny">
+<a href="#start" data-p="start">Start</a><a href="#tjanster" data-p="tjanster">Tjänster</a><a href="#garanti" data-p="garanti">Garanti</a><a href="#kontakt" data-p="kontakt">Kontakta oss</a>
+</div></nav></div></header>
+
+<main>
+<!-- START -->
+<div class="page" id="p-start">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Ett rent hem. Ett fint intryck.</h1>
+<p class="lead">Vi städar hem, kontor, trappuppgångar och bostäder inför flytt och försäljning. Fasta priser, material ingår och en kvalitetsgaranti på allt vi gör.</p>
+<div class="cta"><a class="btn" href="#kontakt">Kontakta oss</a><a class="btn ghost" href="#tjanster">Se alla tjänster</a></div>
+</div>
+<div class="panel"><h3>Därför väljer kunder oss</h3><ul>
+<li>Material ingår i timpriset</li><li>RUT-avdrag direkt på fakturan</li><li>Personlig kontakt före första städningen</li><li>Vi åtgärdar det du inte är nöjd med</li></ul></div>
+</div></div>
+
+<section><div class="wrap">
+<div class="head"><h2>Vad behöver du hjälp med?</h2><p>Välj tjänst så ser du vad som ingår och vad det kostar.</p></div>
+<div class="grid" id="home-cards"></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="head"><h2>Så går det till</h2><p>Tre steg från första kontakt till färdigt resultat.</p></div>
+<div class="grid">
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 1</span><h3>Berätta vad du behöver</h3><p>Fyll i förfrågan eller ring oss. Du får ett personligt svar från oss.</p></div>
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 2</span><h3>Få ett tydligt pris</h3><p>Du får ett prisförslag i förväg. Privatpersoner får RUT-avdrag direkt på fakturan.</p></div>
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 3</span><h3>Vi städar</h3><p>Vi tar med allt material. Blir något inte som tänkt rättar vi till det.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap about">
+<div><h2>Städning med erfarenhet sedan 2008</h2>
+<div class="cities" style="margin-top:18px"><span class="chip">Linköping</span></div></div>
+<div>
+<p>Hej, jag heter Maria och är grundare av Skär Städ. Sedan 2008 har vi hjälpt hushåll och företag att hålla det rent och fint.</p>
+<p>Under de senaste 17 åren har många bostadssäljare anlitat oss inför försäljning. Noggrant arbete och stort engagemang har gjort att flera mäklarbyråer rekommenderar oss till sina kunder.</p>
+<p>Vi vill att du ska känna dig trygg med oss. Därför börjar vi alltid med ett personligt samtal eller ett hembesök.</p>
+<p class="sig">Varma hälsningar,<br>Maria Exempelsson</p>
+<div class="facts" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:26px">
+<div class="fact"><b>Sedan 2008</b><span>i branschen</span></div>
+<div class="fact"><b>Linköping</b><span>med omnejd</span></div>
+<div class="fact"><b>Garanti</b><span>på allt arbete</span></div></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="guar" style="margin:0"><div><b>Inte nöjd? Hör av dig.</b><p style="margin:4px 0 0;color:var(--mut)">Vi står bakom vårt arbete och rättar till det som inte blivit bra.</p></div><div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="#garanti">Vår garanti</a><a class="btn" href="#kontakt">Kontakta oss</a></div></div></div></section>
+</div>
+
+<!-- TJÄNSTER -->
+<div class="page" id="p-tjanster">
+<section><div class="wrap">
+<div class="head"><h2>Våra tjänster</h2><p>Alla priser per timme. Material ingår i samtliga tjänster.</p></div>
+<div class="tabs" role="group" aria-label="Filtrera tjänster">
+<button class="tab" data-f="alla" aria-pressed="true">Alla</button><button class="tab" data-f="privat" aria-pressed="false">För privatpersoner</button><button class="tab" data-f="foretag" aria-pressed="false">För företag och fastigheter</button></div>
+<div id="svcs"></div>
+<div class="guar"><div><b>Kvalitetsgaranti på alla tjänster</b><p style="margin:4px 0 0;color:var(--mut)">Kontakta oss vid synpunkter så åtgärdar vi det du inte är nöjd med.</p></div><a class="btn ghost" style="margin-left:auto" href="#garanti">Läs om garantin</a></div>
+</div></section>
+</div>
+
+<!-- GARANTI -->
+<div class="page" id="p-garanti">
+<section><div class="wrap">
+<div class="head"><h2>Vår garanti</h2><p>Vi vill att du ska känna dig trygg när du anlitar oss. Därför står vi bakom varje städning och rättar till det som inte blivit som det var tänkt.</p></div>
+<p style="max-width:64ch">Tycker du att något inte är utfört enligt överenskommelsen eller dina förväntningar vill vi veta det. Hör av dig så snart du kan, helst inom 48 timmar efter att städningen är klar.</p>
+<div class="grid" style="margin:28px 0">
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 1</span><h3>Hör av dig inom 48 timmar</h3><p>Ring eller mejla oss. Ju tidigare vi får veta, desto enklare är det att hjälpa dig.</p></div>
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 2</span><h3>Skicka gärna bilder</h3><p>Foton eller annan dokumentation hjälper oss att förstå vad det gäller och gör att vi kan agera snabbare.</p></div>
+<div class="card"><span class="chip" style="align-self:flex-start">Steg 3</span><h3>Vi rättar till det</h3><p>Vi åtgärdar bristerna så snart vi har möjlighet.</p></div>
+</div>
+<div class="cta"><a class="btn" href="#kontakt">Kontakta oss</a><a class="btn ghost" href="#tjanster">Se våra tjänster</a></div>
+</div></section>
+</div>
+
+<!-- KONTAKT -->
+<div class="page" id="p-kontakt">
+<section><div class="wrap">
+<div class="head"><h2>Kontakta oss</h2><p>Ring, mejla eller fyll i formuläret längre ned. Vi svarar inom en arbetsdag.</p></div>
+<div class="grid" style="margin-bottom:22px">
+<div class="card"><h3>Ring oss</h3><p>Måndag–lördag 07–17<br>Söndag stängt</p><a class="cl" href="tel:+46130001234" style="color:var(--pink-d);font-weight:600;text-decoration:none;margin-top:auto">013-000 12 34</a></div>
+<div class="card"><h3>Mejla oss</h3><p>För offerter, frågor och fakturaärenden.</p><a href="mailto:hej@exempel.se" style="color:var(--pink-d);font-weight:600;text-decoration:none;margin-top:auto">hej@exempel.se</a></div>
+<div class="card"><h3>Linköping</h3><p>Exempelgatan 12<br>582 00 Linköping</p><span class="pr">Huvudkontor</span></div>
+</div>
+<p class="note" style="max-width:none;margin-bottom:44px">Org.nr 556000-0000 · Godkänd för F-skatt · Privatpersoner får RUT-avdrag direkt på fakturan. <i>(Demouppgifter)</i></p>
+<div class="head"><h2>Skicka en förfrågan</h2><p>Berätta vad du behöver hjälp med så återkommer vi med ett prisförslag.</p></div>
+<div id="skicka" style="max-width:720px">
+<form id="f">
+<div class="two"><label>Namn<input name="n" required autocomplete="name"></label><label>Telefon<input name="t" type="tel" autocomplete="tel"></label></div>
+<div class="two"><label>Tjänst<select name="s" id="sel"></select></label><label>E-post<input name="o" type="email" autocomplete="email"></label></div>
+<fieldset id="flyttq"><legend>Om bostaden</legend>
+<div class="two"><label>Bostadsyta (m²)<input name="a" type="number" min="1" inputmode="numeric" required></label><label>Biyta (m²)<input name="b" type="number" min="0" inputmode="numeric" placeholder="0"></label></div>
+<div class="two">
+<label>Har djur förekommit i hemmet?<select name="c" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+<label>Har rökning förekommit i hemmet?<select name="d" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+<label>Har bostaden inglasad balkong?<select name="e" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+<label>Antal badrum<select name="f" required><option value="" selected disabled>Välj</option><option>1</option><option>2</option><option>3+</option></select></label>
+<label>Har du förråd?<select name="g" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+<label>Har du garage?<select name="h" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+<label>Finns tvättmaskin/torktumlare?<select name="i" required><option value="" selected disabled>Välj</option><option>En av dem</option><option>Båda</option><option>Nej</option></select></label>
+<label>Extra vitvaror att rengöra? (t.ex. extra frys)<select name="j" required><option value="" selected disabled>Välj</option><option>Ja</option><option>Nej</option></select></label>
+</div></fieldset>
+<label>Meddelande<textarea name="m" rows="5" placeholder="Bostadens storlek, antal fönster eller önskad starttid"></textarea></label>
+<button class="btn" type="submit">Skicka förfrågan</button>
+<p id="fs" class="note" style="display:none;margin:0">Ditt e-postprogram öppnas med förfrågan ifylld. Skicka mejlet så hör vi av oss.</p>
+</form>
+</div></div></section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Skär Städ. Alla rättigheter förbehållna.</span><span>Mån–lör 07–17 · Söndag stängt</span></div></footer>
+
+<script>
+var S=[
+{id:"flytt",t:"Flyttstädning",g:["privat"],d:"Boendet ska vara rent, fräscht och redo för nästa ägare. Vi går igenom alla moment nedan så att du kan lämna över nycklarna med gott samvete.",p:[["Pris","Offert"]],n:"Pris får du via kontaktformuläret. Fönsterputs görs inte från yttertak eller över 4 m höjd.",m:[
+["Alla rum",["Fönster putsas på alla sidor, inklusive ram och bleck","Persienner rengörs","Lister, dörrar, karmar, fönsterbrädor och fria ytor dammsugs och torkas av","Garderober och skåp rengörs in- och utvändigt","Element rengörs, även bakom","Väggar, eluttag, lampor och speglar dammtorkas","Kakelugn och öppen spis rengörs, aska tas bort","Ytterdörrar, ledstänger och räcken torkas av"]],
+["Kök",["Kyl och frys rengörs in- och utvändigt, även bakom","Spis och ugn rengörs, inklusive plåtar och galler, även bakom spisen","Fläkt och fläktfilter rengörs (ej kolfilter)","Skåp, hyllor och lådor rengörs in- och utvändigt","Kakel och stänkskydd rengörs","Under skåp och sockel torkas av","Mikrovågsugn och diskmaskin rengörs in- och utvändigt","Sopkorg töms och torkas av","Diskho, blandare, propp och sil putsas"]],
+["Badrum och toalett",["Väggar, tak och golv rengörs","Blandare, synliga rör och duschmunstycke putsas","Väggar och fogar avfettas och avkalkas","Golvbrunn och vattenlås rengörs om möjligt","Dusch eller badkar rengörs om det går att dra fram","Badrumsskåp torkas av in- och utvändigt","Kran, handfat och toalettstol rengörs","Tvättmaskin, torktumlare och torkskåp rengörs in- och utvändigt"]]]},
+{id:"visning",t:"Visningsstädning",g:["privat","foretag"],d:"Ett fräscht hem väcker intresse hos alla som kommer på visning. Vi gör bostaden presentabel och attraktiv för tänkbara köpare.",p:[["Privat","260 kr/tim"],["Företag","410 kr/tim"]],s:"Privat inkl. moms efter RUT-avdrag. Företag exkl. moms."},
+{id:"hem",t:"Hemstädning",g:["privat"],d:"Regelbunden städning som anpassas efter dig och ditt schema. Vi börjar med ett samtal eller hembesök där du berättar hur du vill ha det.",p:[["Privat","260 kr/tim"]],s:"Inkl. moms efter RUT-avdrag."},
+{id:"bygg",t:"Byggstädning",g:["privat","foretag"],d:"Städning efter renovering eller nyproduktion. Vid delvis renovering kan vi kombinera bygg- och flyttstädning.",p:[["Privat","260 kr/tim"],["Företag","410 kr/tim"]],s:"Privat inkl. moms efter RUT-avdrag. Företag exkl. moms."},
+{id:"kontor",t:"Kontorsstädning",g:["foretag"],d:"Rena och trivsamma lokaler och gemensamma ytor ger ett professionellt intryck och en bättre arbetsmiljö.",p:[["Företag","410 kr/tim"]],s:"Exkl. moms."},
+{id:"trapp",t:"Trappstädning",g:["foretag"],d:"Regelbunden städning av allmänna ytor för hyresvärdar och bostadsrättsföreningar. Vi gör upp en plan som passar just er fastighet.",p:[["Företag","410 kr/tim"]],s:"Exkl. moms."},
+{id:"fonster",t:"Fönsterputs",g:["privat","foretag"],d:"Vi putsar fönster, bleck, ram och fönsterbrädor. Vridbara och fasta fönster putsas på två sidor. Delade fönster rensas mellan glasen.",p:[["Pris","Offert"]],n:"Ange antal fönster och typ i förfrågan så återkommer vi med prisförslag."}];
+function pr(s){return s.p.map(function(x){return"<div><span>"+x[0]+"</span><b>"+x[1]+"</b></div>"}).join("")+(s.s?"<small>"+s.s+"</small>":"")}
+function cardHTML(s){var l=s.p.map(function(x){return x[1]}).join(" / ");return'<a class="card" href="#tjanster-'+s.id+'"><h3>'+s.t+'</h3><p>'+s.d.split(". ")[0].replace(/\.$/,"")+'.</p><span class="pr">'+(s.p.length>1?"Från "+s.p[0][1]:l)+'</span></a>'}
+function svcHTML(s){var tg=s.g.map(function(g){return'<span class="tag">'+(g=="privat"?"Privat":"Företag")+"</span>"}).join("");
+var det=(s.m||[]).map(function(m){return"<details><summary>"+m[0]+"</summary><ul>"+m[1].map(function(i){return"<li>"+i+"</li>"}).join("")+"</ul></details>"}).join("");
+return'<article class="svc" id="'+s.id+'" data-g="'+s.g.join(" ")+'"><div class="svc-top"><div style="flex:1;min-width:240px">'+tg+'<h3>'+s.t+'</h3><p class="d">'+s.d+'</p></div><div class="price">'+pr(s)+'</div></div>'+det+(s.n?'<p class="note" style="margin:14px 0 0">'+s.n+"</p>":"")+(s.id=="flytt"?'<a class="btn" style="margin-top:18px" href="#kontakt-flytt">Få pris på flyttstädning</a>':"")+"</article>"}
+document.getElementById("home-cards").innerHTML=S.map(cardHTML).join("");
+document.getElementById("svcs").innerHTML=S.map(svcHTML).join("");
+document.getElementById("sel").innerHTML=S.map(function(s){return"<option>"+s.t+"</option>"}).join("");
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-pressed",x==b)});var f=b.dataset.f;document.querySelectorAll(".svc").forEach(function(c){c.style.display=(f=="alla"||c.dataset.g.indexOf(f)>-1)?"":"none"})}});
+function tq(){var on=document.getElementById("sel").value=="Flyttstädning",q=document.getElementById("flyttq");q.hidden=!on;q.disabled=!on}
+document.getElementById("sel").onchange=tq;tq();
+function route(){var h=location.hash.slice(1)||"start",sub="";if(h.indexOf("tjanster-")==0){sub=h.slice(9);h="tjanster"}
+if(h=="kontakt-flytt"){h="kontakt";document.getElementById("sel").value="Flyttstädning";tq()}
+if(["start","tjanster","garanti","kontakt"].indexOf(h)<0)h="start";
+document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id=="p-"+h)});
+document.querySelectorAll(".links a").forEach(function(a){a.dataset.p==h?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+if(sub){var el=document.getElementById(sub);if(el){var d=el.querySelector("details");el.scrollIntoView();}}else window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);route();
+document.getElementById("f").onsubmit=function(e){e.preventDefault();var f=e.target,L={a:"Bostadsyta (m²)",b:"Biyta (m²)",c:"Djur förekommit",d:"Rökning förekommit",e:"Inglasad balkong",f:"Antal badrum",g:"Förråd",h:"Garage",i:"Tvättmaskin/torktumlare",j:"Extra vitvaror"},q="";if(f.s.value=="Flyttstädning"){q="\n\nOm bostaden:\n"+Object.keys(L).map(function(k){return L[k]+": "+(f.elements[k].value||"-")}).join("\n")}
+var b="Namn: "+f.n.value+"\nTelefon: "+f.t.value+"\nTjänst: "+f.s.value+"\nE-post: "+f.o.value+q+"\n\n"+f.m.value;
+document.getElementById("fs").style.display="block";location.href="mailto:hej@exempel.se?subject="+encodeURIComponent("Förfrågan: "+f.s.value)+"&body="+encodeURIComponent(b)}
+</script>
+</body>
+</html>
 
